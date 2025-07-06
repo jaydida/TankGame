@@ -29,6 +29,10 @@ public class BulletObj : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other == null)
+        {
+            return;
+        }
         //子弹射击到立方体会爆炸
         //同样 子弹射击到  不同阵营的对象也会爆炸
         if (other.CompareTag("Cube") ||
